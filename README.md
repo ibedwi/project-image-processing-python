@@ -1,14 +1,15 @@
-# Equation used
+# README
 
-## RGB to CMYK
-### RGB to CMY
+## EQUATION USED
+### RGB to CMYK
+#### RGB to CMY
 ![eq1_1](https://latex.codecogs.com/gif.latex?C%20%3D%201%20-%20%5Cleft%20%28%20%5Cfrac%7BR%7D%7B255%7D%20%5Cright%20%29)
 
 ![eq1_2](https://latex.codecogs.com/gif.latex?M%20%3D%201%20-%20%5Cleft%20%28%20%5Cfrac%7BG%7D%7B255%7D%20%5Cright%20%29)
 
 ![eq1_3](https://latex.codecogs.com/gif.latex?Y%20%3D%201%20-%20%5Cleft%20%28%20%5Cfrac%7BB%7D%7B255%7D%20%5Cright%20%29)
 
-### RGB to CMYK 
+#### RGB to CMYK 
 
 ![eq2_1](https://latex.codecogs.com/gif.latex?K%20%3D%201%20-%20%5Cmax%20%5Cleft%20%28%20C%2CM%2CY%20%5Cright%20%29)
 
@@ -18,7 +19,7 @@
 
 ![eq2_4](https://latex.codecogs.com/gif.latex?Y_%7BCMYK%7D%20%3D%20%5Cfrac%7B%5Cleft%20%28Y_%7BCMY%7D%20-%20K%20%5Cright%20%29%7D%7B%5Cleft%20%28%201%20-%20K%20%5Cright%20%29%7D)
 
-## RGB to YCrCb
+### RGB to YCrCb
 
 Original Equation :
 
