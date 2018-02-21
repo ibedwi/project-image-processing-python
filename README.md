@@ -40,3 +40,30 @@ Equation used to represent YCrCb in 0-255 range :
 ![eq4_2](https://latex.codecogs.com/gif.latex?Cb%20%3D%20128%20&plus;%20%5Cleft%20%28%20%5Cfrac%7B%5Cleft%20%28%20-37.797%20%5Ctimes%20R%20%5Cright%20%29%7D%7B256%7D%20-%20%5Cfrac%7B%5Cleft%20%28%2074.203%20%5Ctimes%20G%20%5Cright%20%29%7D%7B256%7D%20&plus;%20%5Cfrac%7B%5Cleft%20%28%20112.0%20%5Ctimes%20B%20%5Cright%20%29%7D%7B256%7D%20%5Cright%20%29)
 
 ![eq4_3](https://latex.codecogs.com/gif.latex?Cb%20%3D%20128%20&plus;%20%5Cleft%20%28%20%5Cfrac%7B%5Cleft%20%28%20112.0%20%5Ctimes%20R%20%5Cright%20%29%7D%7B256%7D%20-%20%5Cfrac%7B%5Cleft%20%28%2093.786%20%5Ctimes%20G%20%5Cright%20%29%7D%7B256%7D%20-%20%5Cfrac%7B%5Cleft%20%28%2018.214%20%5Ctimes%20B%20%5Cright%20%29%7D%7B256%7D%20%5Cright%20%29)
+
+### RGB to HSV
+The R,G,B values are divided by 255 to change the range from 0..255 to 0..1:
+
+![eq5_1](https://latex.codecogs.com/gif.latex?R%27%20%3D%20R/255)
+
+![eq5_2](https://latex.codecogs.com/gif.latex?G%27%20%3D%20G/255)
+
+![eq5_3](https://latex.codecogs.com/gif.latex?B%27%20%3D%20B/255)
+
+![eq5_4](https://latex.codecogs.com/gif.latex?Cmax%20%3D%20%5Cmax%28R%27%2CG%27%2CB%27%29)
+
+![eq5_5](https://latex.codecogs.com/gif.latex?Cmin%20%3D%20%5Cmin%28R%27%2CG%27%2CB%27%29)
+
+![eq5_6](https://latex.codecogs.com/gif.latex?%5CDelta%20%3D%20Cmax%20-%20Cmin)
+
+Hue calculation : 
+
+![eq5_7](https://latex.codecogs.com/gif.latex?H%20%3D%20%5Cleft%5C%7B%5Cbegin%7Bmatrix%7D%200%5E%7B%5Ccirc%7D%20%26%20%5CDelta%20%3D%200%5C%5C%2060%5E%7B%5Ccirc%7D%20%5Ctimes%20%5Cleft%20%28%20%5Cfrac%7BG%27-B%27%7D%7B%5CDelta%7D%20%5Cmod%206%5Cright%20%29%26%20%2C%20Cmax%20%3D%20R%27%5C%5C%2060%5E%7B%5Ccirc%7D%20%5Ctimes%20%5Cleft%20%28%20%5Cfrac%7BB%27-R%27%7D%7B%5CDelta%7D%20&plus;2%5Cright%20%29%26%20%2C%20Cmax%20%3D%20G%27%5C%5C%2060%5E%7B%5Ccirc%7D%20%5Ctimes%20%5Cleft%20%28%20%5Cfrac%7BR%27-G%27%7D%7B%5CDelta%7D%20&plus;4%5Cright%20%29%26%20%2C%20Cmax%20%3D%20B%27%5C%5C%20%5Cend%7Bmatrix%7D%5Cright.)
+
+Saturation calculation :
+
+![eq5_8](https://latex.codecogs.com/gif.latex?S%20%3D%20%5Cleft%5C%7B%5Cbegin%7Bmatrix%7D%200%20%26%20%2CCmax%20%3D%200%5C%5C%20%5Cfrac%7B%5CDelta%7D%7BC_%7Bmax%7D%7D%20%26%20%2C%20Cmax%20%5Cneq%200%20%5Cend%7Bmatrix%7D%5Cright.)
+
+Value calculation : 
+
+![eq5_9](https://latex.codecogs.com/gif.latex?V%20%3D%20Cmax)
