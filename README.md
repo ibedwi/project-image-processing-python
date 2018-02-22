@@ -1,6 +1,14 @@
 # README
 
 ## EQUATION USED
+### RGB to Grayscale
+![eq_rgb2grayscale_1](https://latex.codecogs.com/gif.latex?y%20%3D%200.299R%20&plus;%200.587G%20&plus;%200.144B)
+
+### RGB to Binary
+Before using the equation, first convert the RGB image into Grayscale image.
+
+![eq_rgb2bw_1](https://latex.codecogs.com/gif.latex?y%27%20%3D%20%5Cleft%5C%7B%5Cbegin%7Bmatrix%7D%201%2C%20%26%20y%20%5Cgeq%20threshold%5C%5C%200%2C%20%26%20otherwise%20%5Cend%7Bmatrix%7D%5Cright.) 
+
 ### RGB to CMYK
 #### RGB to CMY
 ![eq1_1](https://latex.codecogs.com/gif.latex?C%20%3D%201%20-%20%5Cleft%20%28%20%5Cfrac%7BR%7D%7B255%7D%20%5Cright%20%29)
