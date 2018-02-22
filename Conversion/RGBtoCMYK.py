@@ -1,13 +1,14 @@
 """
 @author: Ida Bagus Dwi Satria Kusuma - @dskusuma
 """
+
 import numpy as np
 import cv2
 
 # Read color image
 img = cv2.imread('gambar1.jpg')
 
-# Get the image height, width, channel
+# Get the image's height, width, and channels
 height,width,channel = img.shape
 
 # Create blank CMY image

@@ -1,18 +1,31 @@
 """
 @author: Ida Bagus Dwi Satria Kusuma - @dskusuma
+Notes   :
+There are two kind of solutions. The first is solution using the Open-CV's
+library. The second is without the library.
 """
 
 import cv2 
 import numpy as np
 
-# Baca gambar
+# Read color image
 img = cv2.imread('gambar1.jpg',1)
 
-# Ambil tinggi dan lebar gambar 
+# Get the image's height, width, and channels
 height,width,depth = img.shape
 
-# Buat gambar kosong
+# Create blank YCrCb image
 img_ycrcb = np.zeros((height,width,3))
+
+# ======================================================
+# IMPLEMENTATION USING OPENCV LIBRARY 
+# ======================================================
+# img_ycrcb = cv2.cvtColor(img, cv2.COLOR_BGR2YCR_CB)
+
+# ======================================================
+# IMPLEMENTATION WITHOUT OPENCV LIBRARY 
+# ======================================================
+
 
 # kalkulasi
 for i in np.arange(height):
@@ -38,5 +51,9 @@ for i in np.arange(height):
         img_ycrcb.itemset((i,j,1),Cr)
         img_ycrcb.itemset((i,j,2),Cb)
         
+# Write image
 cv2.imwrite('image_ycrcb.jpg',img_ycrcb)
-
+# View image
+cv2.imshow('image',img_ycrcb)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
