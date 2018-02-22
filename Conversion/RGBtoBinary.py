@@ -23,23 +23,23 @@ img_grayscale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 # ======================================================
 # IMPLEMENTATION USING OPENCV LIBRARY 
 # ======================================================
-# (thresh, img_binary) = cv2.threshold(img_grayscale, 128, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
+(thresh, img_binary) = cv2.threshold(img_grayscale, 128, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
 
 # ======================================================
 # IMPLEMENTATION WITHOUT OPENCV LIBRARY 
 # ======================================================
 # Set Threshold
-thresh = 120
+# thresh = 120
 # CALCULATE
-for i in np.arange(height):
-    for j in np.arange(width):
-        x = img_grayscale.item(i,j)
-        if x >= thresh:
-            y = 1
-        else :
-            y = 0
+# for i in np.arange(height):
+#     for j in np.arange(width):
+#         x = img_grayscale.item(i,j)
+#         if x >= thresh:
+#             y = 1
+#         else :
+#             y = 0
 
-        img_binary.itemset((i,j,0),int(y))
+#         img_binary.itemset((i,j,0),int(y))
 
 # Write image
 cv2.imwrite('image_binary.jpg',img_binary)
